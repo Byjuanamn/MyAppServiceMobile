@@ -1,0 +1,2 @@
+
+#import <MicrosoftAzureMobile/MicrosoftAzureMobile.h>

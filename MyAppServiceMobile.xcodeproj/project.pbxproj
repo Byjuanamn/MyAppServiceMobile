@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DB476D41DAD91A60053BB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB476D31DAD91A60053BB4F /* AppDelegate.swift */; };
+		5DB476D91DAD91A60053BB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB476D71DAD91A60053BB4F /* Main.storyboard */; };
+		5DB476DC1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DB476DA1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld */; };
+		5DB476DE1DAD91A60053BB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB476DD1DAD91A60053BB4F /* Assets.xcassets */; };
+		5DB476E11DAD91A60053BB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB476DF1DAD91A60053BB4F /* LaunchScreen.storyboard */; };
+		5DB476E91DAD929E0053BB4F /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB476E81DAD929E0053BB4F /* MicrosoftAzureMobile.framework */; };
+		5DB476ED1DAD93A40053BB4F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB476EC1DAD93A40053BB4F /* WebKit.framework */; };
+		5DB476F01DAD94130053BB4F /* AutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5DB476D01DAD91A60053BB4F /* MyAppServiceMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppServiceMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB476D31DAD91A60053BB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DB476D81DAD91A60053BB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DB476DB1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAppServiceMobile.xcdatamodel; sourceTree = "<group>"; };
+		5DB476DD1DAD91A60053BB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DB476E01DAD91A60053BB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DB476E21DAD91A60053BB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB476E81DAD929E0053BB4F /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		5DB476EA1DAD92E90053BB4F /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		5DB476EC1DAD93A40053BB4F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DB476CD1DAD91A60053BB4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB476ED1DAD93A40053BB4F /* WebKit.framework in Frameworks */,
+				5DB476E91DAD929E0053BB4F /* MicrosoftAzureMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DB476C71DAD91A50053BB4F = {
+			isa = PBXGroup;
+			children = (
+				5DB476EA1DAD92E90053BB4F /* MyApp-Bridging-Header.h */,
+				5DB476D21DAD91A60053BB4F /* MyAppServiceMobile */,
+				5DB476D11DAD91A60053BB4F /* Products */,
+				5DB476EB1DAD93A40053BB4F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DB476D11DAD91A60053BB4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DB476D01DAD91A60053BB4F /* MyAppServiceMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DB476D21DAD91A60053BB4F /* MyAppServiceMobile */ = {
+			isa = PBXGroup;
+			children = (
+				5DB476EE1DAD93E20053BB4F /* Vcs */,
+				5DB476E81DAD929E0053BB4F /* MicrosoftAzureMobile.framework */,
+				5DB476D31DAD91A60053BB4F /* AppDelegate.swift */,
+				5DB476D71DAD91A60053BB4F /* Main.storyboard */,
+				5DB476DD1DAD91A60053BB4F /* Assets.xcassets */,
+				5DB476DF1DAD91A60053BB4F /* LaunchScreen.storyboard */,
+				5DB476E21DAD91A60053BB4F /* Info.plist */,
+				5DB476DA1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld */,
+			);
+			path = MyAppServiceMobile;
+			sourceTree = "<group>";
+		};
+		5DB476EB1DAD93A40053BB4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DB476EC1DAD93A40053BB4F /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DB476EE1DAD93E20053BB4F /* Vcs */ = {
+			isa = PBXGroup;
+			children = (
+				5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */,
+			);
+			name = Vcs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DB476CF1DAD91A60053BB4F /* MyAppServiceMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB476E51DAD91A60053BB4F /* Build configuration list for PBXNativeTarget "MyAppServiceMobile" */;
+			buildPhases = (
+				5DB476CC1DAD91A60053BB4F /* Sources */,
+				5DB476CD1DAD91A60053BB4F /* Frameworks */,
+				5DB476CE1DAD91A60053BB4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyAppServiceMobile;
+			productName = MyAppServiceMobile;
+			productReference = 5DB476D01DAD91A60053BB4F /* MyAppServiceMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DB476C81DAD91A50053BB4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Cloud On Mobile";
+				TargetAttributes = {
+					5DB476CF1DAD91A60053BB4F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8Z8X9YVPSZ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5DB476CB1DAD91A50053BB4F /* Build configuration list for PBXProject "MyAppServiceMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DB476C71DAD91A50053BB4F;
+			productRefGroup = 5DB476D11DAD91A60053BB4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DB476CF1DAD91A60053BB4F /* MyAppServiceMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DB476CE1DAD91A60053BB4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB476E11DAD91A60053BB4F /* LaunchScreen.storyboard in Resources */,
+				5DB476DE1DAD91A60053BB4F /* Assets.xcassets in Resources */,
+				5DB476D91DAD91A60053BB4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DB476CC1DAD91A60053BB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB476DC1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld in Sources */,
+				5DB476D41DAD91A60053BB4F /* AppDelegate.swift in Sources */,
+				5DB476F01DAD94130053BB4F /* AutorTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DB476D71DAD91A60053BB4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DB476D81DAD91A60053BB4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DB476DF1DAD91A60053BB4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DB476E01DAD91A60053BB4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DB476E31DAD91A60053BB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DB476E41DAD91A60053BB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DB476E61DAD91A60053BB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Z8X9YVPSZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyAppServiceMobile",
+				);
+				INFOPLIST_FILE = MyAppServiceMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MyAppServiceMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5DB476E71DAD91A60053BB4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8Z8X9YVPSZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyAppServiceMobile",
+				);
+				INFOPLIST_FILE = MyAppServiceMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MyAppServiceMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DB476CB1DAD91A50053BB4F /* Build configuration list for PBXProject "MyAppServiceMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB476E31DAD91A60053BB4F /* Debug */,
+				5DB476E41DAD91A60053BB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DB476E51DAD91A60053BB4F /* Build configuration list for PBXNativeTarget "MyAppServiceMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB476E61DAD91A60053BB4F /* Debug */,
+				5DB476E71DAD91A60053BB4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5DB476DA1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5DB476DB1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodel */,
+			);
+			currentVersion = 5DB476DB1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodel */;
+			path = MyAppServiceMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5DB476C81DAD91A50053BB4F /* Project object */;
+}
