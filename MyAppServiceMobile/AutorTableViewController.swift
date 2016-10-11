@@ -11,7 +11,7 @@ import UIKit
 class AutorTableViewController: UITableViewController {
 
     var client: MSClient = MSClient(applicationURL: URL(string: "http://boot3labs-mbass.azurewebsites.net")!)
-    var model: [String]? = []
+    var model: [Dictionary<String, AnyObject>]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,9 @@ class AutorTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        addNewAutor("Juan Martin")
+//        addNewAutor("Juan Martin")
+        
+        readAllItemsInTable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +37,7 @@ class AutorTableViewController: UITableViewController {
         
         let tableMS = client.table(withName: "Autors")
         
-        tableMS.insert(["name" : name]) { (result, error) in
+        tableMS.insert(["name" : name, "secondname": "Martin"]) { (result, error) in
             
             if let _ = error {
                 print(error)
@@ -46,28 +48,68 @@ class AutorTableViewController: UITableViewController {
         }
     }
     
+    func readAllItemsInTable() {
+        
+        let tableMS = client.table(withName: "Autors")
+        
+        let predicate = NSPredicate(format: "name == 'Juan Martin'")
+        
+        tableMS.read(with: predicate) { (results, error) in
+            if let _ = error {
+                print(error)
+                return
+            }
+            
+            
+            if let items = results {
+                
+                for item in items.items! {
+                    self.model?.append(item as! [String : AnyObject])
+                }
+                
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                }
+               
+            }
+            
+            
+        }
+        
+    }
+    
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        if (model?.isEmpty)! {
+            return 0
+        }
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if (model?.isEmpty)! {
+            return 0
+        }
+
+        return (model?.count)!
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELDA", for: indexPath)
 
         // Configure the cell...
 
+        let item = model?[indexPath.row]
+        
+        cell.textLabel?.text = item?["name"] as! String?
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
