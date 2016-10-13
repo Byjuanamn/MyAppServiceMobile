@@ -8,6 +8,9 @@
 
 import UIKit
 
+typealias AutorRecord = Dictionary<String, AnyObject>
+
+
 class AutorTableViewController: UITableViewController {
 
     var client: MSClient = MSClient(applicationURL: URL(string: "http://boot3labs-mbass.azurewebsites.net")!)
@@ -16,16 +19,37 @@ class AutorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//        addNewAutor("Juan Martin")
         
         readAllItemsInTable()
     }
 
+    @IBAction func addNewAutor(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Nuevo Autor", message: "Escribe el nombre de un autor", preferredStyle: .alert)
+        
+        
+        let actionOk = UIAlertAction(title: "OK", style: .default) { (alertAction) in
+            let nameAutor = alert.textFields![0] as UITextField
+            let secondName = alert.textFields![1] as UITextField
+            
+            
+            self.inserNewAutor(nameAutor.text!, secondName: secondName.text!)
+            
+        }
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(actionOk)
+        alert.addAction(actionCancel)
+        alert.addTextField { (textField) in
+            
+            textField.placeholder = "Introduce un nombre del autor"
+            
+        }
+        
+        alert.addTextField {(textfield2) in
+            textfield2.placeholder = "Introduce los apellidos"
+        }
+        present(alert, animated: true, completion: nil)
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,11 +57,11 @@ class AutorTableViewController: UITableViewController {
 
     // MARK: - Insert en la tabla de Autores
     
-    func addNewAutor(_ name: String) {
+    func inserNewAutor(_ name: String, secondName: String) {
         
         let tableMS = client.table(withName: "Autors")
         
-        tableMS.insert(["name" : name, "secondname": "Martin"]) { (result, error) in
+        tableMS.insert(["name" : name, "secondname": secondName]) { (result, error) in
             
             if let _ = error {
                 print(error)
@@ -48,18 +72,40 @@ class AutorTableViewController: UITableViewController {
         }
     }
     
-    func readAllItemsInTable() {
+    
+    func deleteRecord(_ item: AutorRecord) {
         
         let tableMS = client.table(withName: "Autors")
         
-        let predicate = NSPredicate(format: "name == 'Juan Martin'")
-        
-        tableMS.read(with: predicate) { (results, error) in
+        tableMS.delete(item) { (reult, error) in
+            
             if let _ = error {
                 print(error)
                 return
             }
             
+            // refrescar la tabla
+            self.readAllItemsInTable()
+        }
+
+        
+    }
+    
+    func readAllItemsInTable() {
+        
+        let tableMS = client.table(withName: "Autors")
+        
+//        let predicate = NSPredicate(format: "name == 'Juan Martin'")
+        
+        tableMS.read { (results, error) in
+            if let _ = error {
+                print(error)
+                return
+            }
+            
+            if !((self.model?.isEmpty)!) {
+                self.model?.removeAll()
+            }
             
             if let items = results {
                 
@@ -71,11 +117,11 @@ class AutorTableViewController: UITableViewController {
                     
                     self.tableView.reloadData()
                 }
-               
+                
             }
-            
-            
+
         }
+
         
     }
     
@@ -122,16 +168,18 @@ class AutorTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+       
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .fade)
             let item = self.model?[indexPath.row]
+            
+            self.deleteRecord(item!)
             self.model?.remove(at: indexPath.row)
-//            self.deleteAutor(item: item!)
+            
             tableView.endUpdates()
 
-            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
