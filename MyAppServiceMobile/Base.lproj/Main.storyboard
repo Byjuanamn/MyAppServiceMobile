@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,10 +37,93 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="UiD-SU-qvc" kind="show" identifier="detailAutor" id="go2-IX-aTk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="em1-BN-Pej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="199.25037481259372"/>
+            <point key="canvasLocation" x="1503" y="181"/>
+        </scene>
+        <!--Autor Detail View Controller-->
+        <scene sceneID="4MX-Ro-Z1g">
+            <objects>
+                <viewController id="UiD-SU-qvc" customClass="AutorDetailViewController" customModule="MyAppServiceMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NQz-17-mOx"/>
+                        <viewControllerLayoutGuide type="bottom" id="bW7-fS-AKC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fmy-cz-Vsa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hSn-Xr-C8b">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDG-RD-SJg">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTC-Yx-W4q">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="wM5-G0-lB8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dom-9k-iwk">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Define el estilo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1b8-kK-VqF" userLabel="Estilo">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Idioma materno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXE-5s-oBD" userLabel="idioma">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oXv-a0-160"/>
+                                </constraints>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxL-R5-vR0">
+                                <items>
+                                    <barButtonItem title="Update" id="23Q-SC-j7L">
+                                        <connections>
+                                            <action selector="updateNewDataAutorsAction:" destination="UiD-SU-qvc" id="awP-xQ-MVr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hSn-Xr-C8b" firstAttribute="top" secondItem="NQz-17-mOx" secondAttribute="bottom" id="4GC-B0-nWm"/>
+                            <constraint firstItem="VxL-R5-vR0" firstAttribute="leading" secondItem="fmy-cz-Vsa" secondAttribute="leading" id="K6Z-39-Tqb"/>
+                            <constraint firstItem="hSn-Xr-C8b" firstAttribute="trailing" secondItem="fmy-cz-Vsa" secondAttribute="trailingMargin" id="ShI-RF-8rg"/>
+                            <constraint firstAttribute="trailing" secondItem="VxL-R5-vR0" secondAttribute="trailing" id="Ylg-dy-Tui"/>
+                            <constraint firstItem="dom-9k-iwk" firstAttribute="top" secondItem="hSn-Xr-C8b" secondAttribute="bottom" constant="23" id="g1O-hK-cuY"/>
+                            <constraint firstItem="dom-9k-iwk" firstAttribute="leading" secondItem="fmy-cz-Vsa" secondAttribute="leadingMargin" id="gt9-jo-Zm0"/>
+                            <constraint firstItem="bW7-fS-AKC" firstAttribute="top" secondItem="VxL-R5-vR0" secondAttribute="bottom" id="htZ-vc-oJO"/>
+                            <constraint firstItem="hSn-Xr-C8b" firstAttribute="leading" secondItem="fmy-cz-Vsa" secondAttribute="leadingMargin" id="lB9-E8-8bS"/>
+                            <constraint firstItem="dom-9k-iwk" firstAttribute="trailing" secondItem="fmy-cz-Vsa" secondAttribute="trailingMargin" id="okq-Dk-swW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idiomatxt" destination="cXE-5s-oBD" id="0xR-ru-RRu"/>
+                        <outlet property="nameLbl" destination="SDG-RD-SJg" id="BjY-Bi-XP2"/>
+                        <outlet property="secondNameLbl" destination="XTC-Yx-W4q" id="Ymu-MS-Fpo"/>
+                        <outlet property="styleTxt" destination="1b8-kK-VqF" id="cAu-BW-Jhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySG-aQ-qXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457" y="211"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yip-zI-TWo">

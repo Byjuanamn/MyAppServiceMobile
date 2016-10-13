@@ -15,6 +15,7 @@
 		5DB476E91DAD929E0053BB4F /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB476E81DAD929E0053BB4F /* MicrosoftAzureMobile.framework */; };
 		5DB476ED1DAD93A40053BB4F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB476EC1DAD93A40053BB4F /* WebKit.framework */; };
 		5DB476F01DAD94130053BB4F /* AutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */; };
+		5DCA8FE51DB019A000940AB5 /* AutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCA8FE41DB019A000940AB5 /* AutorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5DB476EA1DAD92E90053BB4F /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		5DB476EC1DAD93A40053BB4F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorTableViewController.swift; sourceTree = "<group>"; };
+		5DCA8FE41DB019A000940AB5 /* AutorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB476EF1DAD94130053BB4F /* AutorTableViewController.swift */,
+				5DCA8FE41DB019A000940AB5 /* AutorDetailViewController.swift */,
 			);
 			name = Vcs;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				5DB476DC1DAD91A60053BB4F /* MyAppServiceMobile.xcdatamodeld in Sources */,
 				5DB476D41DAD91A60053BB4F /* AppDelegate.swift in Sources */,
 				5DB476F01DAD94130053BB4F /* AutorTableViewController.swift in Sources */,
+				5DCA8FE51DB019A000940AB5 /* AutorDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +346,7 @@
 				5DB476E71DAD91A60053BB4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
