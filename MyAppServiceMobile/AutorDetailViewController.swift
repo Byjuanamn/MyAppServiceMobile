@@ -27,27 +27,30 @@ class AutorDetailViewController: UIViewController {
     
     @IBOutlet weak var styleTxt: UITextField! {
         didSet {
-            guard let estilo = model?["style"] as! String? else {
+            guard let estilo = model?["style"], !(estilo is NSNull)  else {
                 return
             }
             
-            styleTxt.text = estilo
+            styleTxt.text = estilo as? String
         }
     }
     
     @IBOutlet weak var idiomatxt: UITextField! {
         didSet {
-            guard let idioma = model?["idiom"] as! String? else {
+            guard let idioma = model?["idiom"], !(idioma is NSNull) else {
                 return
             }
-            idiomatxt.text = idioma
+            
+            idiomatxt.text = idioma as? String
         }
     }
     
+    @IBAction func callCustomApiAction(_ sender: AnyObject) {
+        callCustomApi()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +79,47 @@ class AutorDetailViewController: UIViewController {
             
         })
     }
+    
+    func callCustomApi()  {
+        
+        client?.invokeAPI("MiPrimeraApi",
+                          body: nil,
+                          httpMethod: "GET",
+                          parameters: [ "nombre" : nameLbl.text],
+                          headers: nil,
+                          completion: { (result, response, error) in
+            
+                            if let _ = error {
+                                print(error)
+                                return
+                            }
+            
+            print(result)
+            
+        })
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     /*

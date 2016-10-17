@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyAppServiceMobile/AutorTableViewController.swift"
-            timestampString = "498081439.461023"
+            timestampString = "498396983.864794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyAppServiceMobile/AutorDetailViewController.swift"
-            timestampString = "498081576.386334"
+            timestampString = "498219995.200567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "updateAutor()"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,14 +41,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyAppServiceMobile/AutorDetailViewController.swift"
-            timestampString = "498081610.055582"
+            filePath = "MyAppServiceMobile/AutorTableViewController.swift"
+            timestampString = "498396973.539845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "updateAutor()"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "readAllItemsInTable()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyAppServiceMobile.AutorTableViewController.readAllItemsInTable () -&gt; ()"
+                  moduleName = "MyAppServiceMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/byjuanmn/CloudStation/Formacio%CC%81n/Boot%203/Azure/Show%20me%20the%20code/alumnos/MyAppServiceMobile/MyAppServiceMobile/AutorTableViewController.swift"
+                  timestampString = "498396984.958592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyAppServiceMobile.AutorTableViewController.(readAllItemsInTable () -&gt; ()).(closure #1)"
+                  moduleName = "MyAppServiceMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/byjuanmn/CloudStation/Formacio%CC%81n/Boot%203/Azure/Show%20me%20the%20code/alumnos/MyAppServiceMobile/MyAppServiceMobile/AutorTableViewController.swift"
+                  timestampString = "498396984.960187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,30 +89,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyAppServiceMobile/AutorDetailViewController.swift"
-            timestampString = "498081752.790775"
+            filePath = "MyAppServiceMobile/AutorTableViewController.swift"
+            timestampString = "498396975.125233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "AutorDetailViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyAppServiceMobile/AutorDetailViewController.swift"
-            timestampString = "498081755.68193"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "AutorDetailViewController"
-            landmarkType = "3">
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "readAllItemsInTable()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

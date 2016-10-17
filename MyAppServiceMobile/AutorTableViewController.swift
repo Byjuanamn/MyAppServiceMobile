@@ -13,14 +13,32 @@ typealias AutorRecord = Dictionary<String, AnyObject>
 
 class AutorTableViewController: UITableViewController {
 
-    var client: MSClient = MSClient(applicationURL: URL(string: "http://boot3labs-mbass.azurewebsites.net")!)
+    var client: MSClient = MSClient(applicationURL: URL(string: "https://boot3labs-mbass.azurewebsites.net")!)
     var model: [Dictionary<String, AnyObject>]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let _ = client.currentUser {
+            readAllItemsInTable()
+        } else {
+            doLoginInFacebook()
+        }
+    }
+    
+    func doLoginInFacebook() {
         
-        readAllItemsInTable()
+        client.login(withProvider: "facebook", parameters: nil, controller: self, animated: true) { (user, error) in
+            
+            if let _ = error {
+                print(error)
+                return
+            }
+            
+            if let _ = user {
+                self.readAllItemsInTable()
+            }
+        }
     }
 
     @IBAction func addNewAutor(_ sender: AnyObject) {
@@ -82,7 +100,7 @@ class AutorTableViewController: UITableViewController {
             if let _ = error {
                 print(error)
                 return
-            }
+            } 
             
             // refrescar la tabla
             self.readAllItemsInTable()
@@ -93,11 +111,9 @@ class AutorTableViewController: UITableViewController {
     
     func readAllItemsInTable() {
         
-        let tableMS = client.table(withName: "Autors")
-        
-//        let predicate = NSPredicate(format: "name == 'Juan Martin'")
-        
-        tableMS.read { (results, error) in
+        client.invokeAPI("readAllRecords", body: nil, httpMethod: "GET", parameters: nil, headers: nil) { (result, respose, error) in
+            
+            
             if let _ = error {
                 print(error)
                 return
@@ -106,11 +122,13 @@ class AutorTableViewController: UITableViewController {
             if !((self.model?.isEmpty)!) {
                 self.model?.removeAll()
             }
-            
-            if let items = results {
+           
+            if let _ = result {
                 
-                for item in items.items! {
-                    self.model?.append(item as! [String : AnyObject])
+                let json = result as! [AutorRecord]
+                
+                for item in json {
+                    self.model?.append(item)
                 }
                 
                 DispatchQueue.main.async {
@@ -119,6 +137,9 @@ class AutorTableViewController: UITableViewController {
                 }
                 
             }
+            
+            
+           
 
         }
 

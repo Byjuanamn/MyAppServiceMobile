@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Lj-U4-jhK" id="IaK-DO-Iwm">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -96,6 +96,12 @@
                                     <barButtonItem title="Update" id="23Q-SC-j7L">
                                         <connections>
                                             <action selector="updateNewDataAutorsAction:" destination="UiD-SU-qvc" id="awP-xQ-MVr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1Pg-P7-4Wn"/>
+                                    <barButtonItem title="Call" id="0cz-WI-6Sf">
+                                        <connections>
+                                            <action selector="callCustomApiAction:" destination="UiD-SU-qvc" id="BwG-H6-mtx"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
